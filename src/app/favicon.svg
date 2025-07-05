@@ -1,0 +1,73 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dotGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6ee7b7;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:0.6" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="url(#bgGradient)" stroke="#059669" stroke-width="1"/>
+  
+  <!-- Outer ring -->
+  <circle cx="16" cy="16" r="12" fill="none" stroke="url(#ringGradient)" stroke-width="1.5" opacity="0.7"/>
+  
+  <!-- Inner ring -->
+  <circle cx="16" cy="16" r="8" fill="none" stroke="url(#ringGradient)" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Connected dots forming "P" shape -->
+  <!-- Vertical line of dots -->
+  <circle cx="12" cy="8" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  <circle cx="12" cy="11" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  <circle cx="12" cy="14" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  <circle cx="12" cy="17" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  <circle cx="12" cy="20" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  <circle cx="12" cy="23" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  
+  <!-- Horizontal line of dots (top of P) -->
+  <circle cx="15" cy="8" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  <circle cx="18" cy="8" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  <circle cx="21" cy="8" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  
+  <!-- Curved line of dots (right side of P) -->
+  <circle cx="21" cy="11" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  <circle cx="21" cy="14" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  <circle cx="21" cy="17" r="1.5" fill="url(#dotGradient)" filter="url(#glow)"/>
+  
+  <!-- Connection lines between dots -->
+  <path d="M12 9.5 L12 12.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  <path d="M12 12.5 L12 15.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  <path d="M12 15.5 L12 18.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  <path d="M12 18.5 L12 21.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  <path d="M12 21.5 L12 24.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  
+  <path d="M12 6.5 L15 6.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  <path d="M15 6.5 L18 6.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  <path d="M18 6.5 L21 6.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  
+  <path d="M21 9.5 L21 12.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  <path d="M21 12.5 L21 15.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  <path d="M21 15.5 L21 18.5" stroke="#34d399" stroke-width="0.5" opacity="0.8"/>
+  
+  <!-- Decorative sparkles -->
+  <circle cx="8" cy="8" r="0.8" fill="#6ee7b7" opacity="0.6"/>
+  <circle cx="24" cy="24" r="0.8" fill="#6ee7b7" opacity="0.6"/>
+  <circle cx="8" cy="24" r="0.6" fill="#6ee7b7" opacity="0.4"/>
+  <circle cx="24" cy="8" r="0.6" fill="#6ee7b7" opacity="0.4"/>
+</svg> 
