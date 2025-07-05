@@ -1,28 +1,55 @@
 "use client";
+import * as React from "react"
 import { ApproveDialog } from "@/components/ApproveDialog";
-import { BlockDialog } from "@/components/BlockDialog";
 import Document from "@/components/signuprequests/Document";
-import { CabHailingUserInfoProps } from "@/dataTypes";
 import { MoveLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import { DeclineDialog } from "@/components/DeclineDialog";
 
-const LogisticsUserInfo = ({
-	name,
-	age,
-	driverRole,
-	gender,
-	address,
-	accountName,
-	accountNumber,
-	vehicleColor,
-	vehicleYear,
-	vehicleModel,
-	vehicleBrand,
-	plateNumber,
-}: CabHailingUserInfoProps) => {
+// Mock data - replace with actual API call
+const mockDeliveryData = {
+	name: "John Doe",
+	age: 27,
+	driverRole: "Delivery Driver",
+	gender: "Male",
+	address: "123 Main St, City, State",
+	accountName: "John Doe",
+	accountNumber: 1234567890,
+	vehicleColor: "White",
+	vehicleYear: 2020,
+	vehicleModel: "Civic",
+	vehicleBrand: "Honda",
+	plateNumber: "ABC123",
+};
+
+interface PageProps {
+	params: {
+		id: string;
+	};
+}
+
+const LogisticsUserInfoPage = ({ params }: PageProps) => {
 	const router = useRouter();
+	
+	// In a real app, you would fetch data based on params.id
+	// const { data } = useQuery(['delivery', params.id], () => fetchDeliveryData(params.id));
+	
+	// For now, using mock data
+	const {
+		name,
+		age,
+		driverRole,
+		gender,
+		address,
+		accountName,
+		accountNumber,
+		vehicleColor,
+		vehicleYear,
+		vehicleModel,
+		vehicleBrand,
+		plateNumber,
+	} = mockDeliveryData;
+
 	return (
 		<div>
 			<div className="border-b pb-6 border-opacity-10 border-b-white border-solid">
@@ -63,4 +90,5 @@ const LogisticsUserInfo = ({
 		</div>
 	);
 };
-export default LogisticsUserInfo;
+
+export default LogisticsUserInfoPage;

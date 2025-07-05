@@ -8,21 +8,50 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { DeclineDialog } from "@/components/DeclineDialog";
 
-const CabHailingUserInfoPage = ({
-	name,
-	age,
-	driverRole,
-	gender,
-	address,
-	accountName,
-	accountNumber,
-	vehicleColor,
-	vehicleYear,
-	vehicleModel,
-	vehicleBrand,
-	plateNumber,
-}: CabHailingUserInfoProps) => {
+// Mock data - replace with actual API call
+const mockRideData: CabHailingUserInfoProps = {
+	name: "Jane Smith",
+	age: 25,
+	driverRole: "Taxi Driver",
+	gender: "Female",
+	address: "456 Oak Ave, City, State",
+	accountName: "Jane Smith",
+	accountNumber: 9876543210,
+	vehicleColor: "Black",
+	vehicleYear: 2019,
+	vehicleModel: "Corolla",
+	vehicleBrand: "Toyota",
+	plateNumber: "XYZ789",
+};
+
+interface PageProps {
+	params: {
+		id: string;
+	};
+}
+
+const CabHailingUserInfoPage = ({ params }: PageProps) => {
 	const router = useRouter();
+	
+	// In a real app, you would fetch data based on params.id
+	// const { data } = useQuery(['ride', params.id], () => fetchRideData(params.id));
+	
+	// For now, using mock data
+	const {
+		name,
+		age,
+		driverRole,
+		gender,
+		address,
+		accountName,
+		accountNumber,
+		vehicleColor,
+		vehicleYear,
+		vehicleModel,
+		vehicleBrand,
+		plateNumber,
+	} = mockRideData;
+
 	return (
 		<div>
 			<div className="border-b pb-6 border-opacity-10 border-b-white border-solid">
@@ -63,4 +92,5 @@ const CabHailingUserInfoPage = ({
 		</div>
 	);
 };
+
 export default CabHailingUserInfoPage;

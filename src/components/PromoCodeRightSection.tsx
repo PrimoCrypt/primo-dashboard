@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
-import { formSchema } from "@/app/promo/page";
+import { formSchema } from "@/lib/schemas";
 import { z } from "zod";
 import { Checkbox } from "./ui/checkbox";
 

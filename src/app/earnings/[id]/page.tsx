@@ -16,7 +16,7 @@ const Customers = ({ params }: { params: { id: number } }) => {
 	const [moreButton, setMoreButton] = useState<boolean>(true);
 	const router = useRouter();
 	const filteredData =
-		revenueData?.data?.filter(
+		myRevenueData?.data?.filter(
 			(item: RevenueUserDataProps) =>
 				item.rideType.toLowerCase().includes(searchTerm.toLowerCase()) ||
 				item.driversName

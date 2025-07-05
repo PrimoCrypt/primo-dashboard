@@ -65,7 +65,7 @@ export interface SignUpRequestsCabHailingDataProps {
 	date: string;
 }
 
-export interface CabHailingUserInfoProps {
+export type CabHailingUserInfoProps = {
 	name: string;
 	age: number;
 	driverRole: string;
